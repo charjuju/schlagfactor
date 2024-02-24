@@ -132,7 +132,7 @@ function App() {
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#28a745' }}>
-        <h2>Le Schlag Factor est le meilleur moyen de calculer la qualité coût/prix.</h2>
+        <h2>Le Schlag Factor est le meilleur moyen de calculer la qualité cuite/prix.</h2>
         <h2> Plus il est élevé, meilleure sera ta cuite pour ton portefeuille.</h2>
       </div>
       <form style={{ marginTop: '100px' }} onSubmit={calculateSchlagFactor}>
