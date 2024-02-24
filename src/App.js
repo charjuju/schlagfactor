@@ -136,7 +136,7 @@ function App() {
         <h2> Plus il est élevé, meilleure sera ta cuite pour ton portefeuille.</h2>
       </div>
       <form style={{ marginTop: '100px', margin: '25px' }} onSubmit={calculateSchlagFactor}>
-        <div>
+        <div className='input-text-form'>
           <label>
             {"Image Url (obtionel)"}:
             <input
@@ -146,7 +146,7 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='input-text-form'>
           <label>
             Nom:
             <input
@@ -156,7 +156,7 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='input-text-form'>
           <label>
             CL:
             <input
@@ -166,7 +166,7 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='input-text-form'>
           <label>
             Taux Alcool:
             <input
@@ -176,7 +176,7 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='input-text-form'>
           <label>
             Prix:
             <input
@@ -186,7 +186,9 @@ function App() {
             />
           </label>
         </div>
-        <button type="submit">Appliquer</button>
+        <div style={{margin: '0px', width: '200px', padding: '10px'}}>
+          <button style={{margin: '0px', width: '100%', height: '100%'}} type="submit">Appliquer</button>
+        </div>
       </form>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {schlagFactor !== null && (
