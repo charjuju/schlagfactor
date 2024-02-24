@@ -244,3 +244,14 @@ ul li:hover {
   background-color: #fff; /* Légère modification de la couleur au survol */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.stateConteneur {
+  display: grid;
+  grid-template-columns: 64px 64px auto auto 64px;
+  align-items: center;
+  gap: 20px 
+}
+
+.ma-stateConteneur > div:nth-child(2) {
+  justify-self: end;
+}

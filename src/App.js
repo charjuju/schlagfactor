@@ -130,12 +130,12 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#28a745' }}>
         <h2>Le Schlag Factor est le meilleur moyen de calculer la qualité cuite/prix.</h2>
         <h2> Plus il est élevé, meilleure sera ta cuite pour ton portefeuille.</h2>
       </div>
-      <form style={{ marginTop: '100px' }} onSubmit={calculateSchlagFactor}>
+      <form style={{ marginTop: '100px', margin: '25px'}} onSubmit={calculateSchlagFactor}>
         <div>
           <label>
             {"Image Url (obtionel)"}:
@@ -194,7 +194,7 @@ function App() {
             <h2>Schlag Factor de pour {nom} {schlagFactor}:</h2>
           </div>
         )}
-        <button onClick={downloadJson}>Télécharger dataBeerShlag.json</button>
+        <button style={{marginBottom: '25px'}} onClick={downloadJson}>Télécharger dataBeerShlag.json</button>
         <input
           type="file"
           accept=".json"
@@ -204,7 +204,7 @@ function App() {
           {dataBeerShlag.map((data, index) => (
             <div key={index} >
 
-              <div key={index} style={{ display: "grid", gridTemplateColumns: "64px auto auto auto", alignItems: 'center', gap: '20px' }}>
+              <div className='stateConteneur' key={index} style={{}}>
                 {data.imageUrl === '' ?
                   <div style={{ height: '64px', width: '64px', backgroundColor: 'rgba(134, 134, 134, 0.28)', borderRadius: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <p>NO</p>
@@ -228,7 +228,6 @@ function App() {
                         />
                       </div>
                       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-
                         <p>Nom</p>
                         <input style={{ margin: '10px' }}
                           type="text"
@@ -271,7 +270,7 @@ function App() {
                     </div>
                   </div>
                 ) : (
-                  <button onClick={() => handleEditClick(index)}>Edit</button>
+                  <button style={{width: '70px'}} onClick={() => handleEditClick(index)}>Edit</button>
                 )}
               </div>
               <div style={{ borderBottom: '1px solid black' }} />
