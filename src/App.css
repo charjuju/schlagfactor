@@ -1,0 +1,246 @@
+/* Style de base pour le formulaire */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Style pour les éléments de formulaire (inputs, boutons, etc.) */
+form input,
+form button {
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Style lorsque l'élément de formulaire est focus */
+form input:focus {
+  border-color: #ffc107; /* Couleur dorée pour rappeler la bière */
+  box-shadow: 0 0 5px #ffc107;
+}
+
+/* Style pour un élément de formulaire "rempli" */
+form input:valid {
+  border-color: #28a745; /* Vert pour indiquer que l'entrée est valide */
+}
+
+/* Style pour un élément de formulaire "non rempli" */
+form input:invalid {
+  border-color: #dc3545; /* Rouge pour indiquer que l'entrée est invalide */
+}
+
+/* Style pour les labels des éléments de formulaire */
+form label {
+  flex: 1;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style pour un bouton dans le formulaire */
+form button {
+  background-color: #ffc107; /* Couleur dorée pour les boutons */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Style au survol des boutons dans le formulaire */
+form button:hover {
+  background-color: #ffca28; /* Légère modification de la couleur au survol */
+}
+
+/* Style pour un bouton "reset" dans le formulaire */
+form button[type="reset"] {
+  background-color: #dc3545; /* Couleur rouge pour les boutons "reset" */
+}
+
+/* Style au survol d'un bouton "reset" dans le formulaire */
+form button[type="reset"]:hover {
+  background-color: #e4606d; /* Légère modification de la couleur au survol */
+}
+
+/* Style pour un bouton "submit" dans le formulaire */
+form button[type="submit"] {
+  background-color: #28a745; /* Couleur verte pour les boutons "submit" */
+}
+
+/* Style au survol d'un bouton "submit" dans le formulaire */
+form button[type="submit"]:hover {
+  background-color: #34b058; /* Légère modification de la couleur au survol */
+}
+
+
+/* Style de base pour l'input */
+input {
+  padding: 10px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Style lorsque l'input est focus */
+input:focus {
+  border-color: #ffc107; /* Couleur dorée pour rappeler la couleur de la bière */
+  box-shadow: 0 0 5px #ffc107;
+}
+
+/* Style pour un input "rempli" */
+input:valid {
+  border-color: #28a745; /* Vert pour indiquer que l'entrée est valide */
+}
+
+/* Style pour un input "non rempli" */
+input:invalid {
+  border-color: #dc3545; /* Rouge pour indiquer que l'entrée est invalide */
+}
+
+/* Style spécifique pour un input de type submit ou button */
+input[type="submit"],
+input[type="button"] {
+  background-color: #ffc107; /* Couleur dorée pour les boutons */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Style au survol des boutons */
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #ffca28; /* Légère modification de la couleur au survol */
+}
+
+/* Style pour un input de type checkbox ou radio */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style pour un input de type checkbox ou radio avec label */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  font-style: italic;
+  color: #333;
+}
+
+/* Style de base pour les boutons */
+button {
+  padding: 10px 20px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Style lorsque le bouton est survolé */
+button:hover {
+  background-color: #ffc107; /* Couleur dorée au survol */
+  color: white;
+}
+
+/* Style pour un bouton "actif" ou "enfoncé" */
+button:active {
+  background-color: #e0a800; /* Légère modification de la couleur lorsqu'il est enfoncé */
+  border-color: #e0a800;
+}
+
+/* Style pour un bouton de type "primary" */
+button.primary {
+  background-color: #ffc107; /* Couleur dorée pour les boutons principaux */
+  color: white;
+}
+
+/* Style lorsque le bouton "primary" est survolé */
+button.primary:hover {
+  background-color: #ffca28; /* Légère modification de la couleur au survol */
+}
+
+/* Style pour un bouton de type "danger" */
+button.danger {
+  background-color: #dc3545; /* Couleur rouge pour les boutons de danger */
+  color: white;
+}
+
+/* Style lorsque le bouton "danger" est survolé */
+button.danger:hover {
+  background-color: #e4606d; /* Légère modification de la couleur au survol */
+}
+
+/* Style pour un bouton de type "success" */
+button.success {
+  background-color: #28a745; /* Couleur verte pour les boutons de succès */
+  color: white;
+}
+
+/* Style lorsque le bouton "success" est survolé */
+button.success:hover {
+  background-color: #34b058; /* Légère modification de la couleur au survol */
+}
+
+/* Style de base pour la liste non ordonnée */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style pour les éléments de la liste */
+ul li {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Couleur de fond légère */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les titres dans les éléments de la liste */
+ul li h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Style pour les descriptions dans les éléments de la liste */
+ul li p {
+  margin: 10px 0;
+}
+
+/* Style pour les numéros dans les éléments de la liste */
+ul li h1:first-child {
+  font-size: 28px;
+  margin-right: 20px;
+  color: #ffc107; /* Couleur dorée pour les numéros */
+}
+
+/* Style pour les noms de bière dans les éléments de la liste */
+ul li h1:nth-child(2) {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/* Style pour les détails de bière dans les éléments de la liste */
+ul li p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style pour le score de bière dans les éléments de la liste */
+ul li p strong {
+  color: #28a745; /* Couleur verte pour les scores */
+}
+
+/* Style au survol des éléments de la liste */
+ul li:hover {
+  background-color: #fff; /* Légère modification de la couleur au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
