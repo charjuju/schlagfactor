@@ -150,20 +150,22 @@ function App() {
         />
         <ul>
           {dataBeerShlag.map((data, index) => (
-            <div  key={index}>
+            <div key={index} >
 
-              <div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-                {data.imageUrl === '' ?
-                  <div style={{ height: '64px', width: '64px', backgroundColor: 'rgba(134, 134, 134, 0.28)', marginRight: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '100px' }}><p>NO</p></div>
-                  :
-                  <img alt='beerProfil' src={data.imageUrl} style={{ height: '64px', width: '64px', backgroundColor: 'gray', marginRight: '50px' }}></img>
-                }
-                <h1 style={{ marginRight: '50px' }}><strong>{index + 1}</strong></h1>
-                <h1 style={{ marginRight: '50px' }}><strong>{data.nom}</strong> </h1>
-                <p> {data.cl}CL - {data.tauxAlcool}% - {data.prix}€ = <strong>SCORE: {data.schlagFactor}</strong></p>
-              </div>
-              <div style={{borderBottom: '1px solid black'}}/>
+            <div key={index} style={{ display: "grid", gridTemplateColumns: "64px auto auto auto", alignItems: 'center', gap: '20px' }}>
+              {data.imageUrl === '' ?
+                <div style={{ height: '64px', width: '64px', backgroundColor: 'rgba(134, 134, 134, 0.28)', borderRadius: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <p>NO</p>
+                </div>
+                :
+                <img alt='beerProfil' src={data.imageUrl} style={{ height: '64px', width: '64px' }}></img>
+              }
+              <h1><strong>{index + 1}</strong></h1>
+              <h1><strong>{data.nom}</strong></h1>
+              <p>{data.cl}CL - {data.tauxAlcool}% - {data.prix}€ = <strong>SCORE: {data.schlagFactor}</strong></p>
             </div>
+              <div style={{ borderBottom: '1px solid black' }} />
+              </div>
           ))}
         </ul>
       </div>
