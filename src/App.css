@@ -265,3 +265,28 @@ ul li:hover {
   margin: 0px;
   margin-left: 10px;
 }
+
+.button-prelist {
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.button-prelist:hover {
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  color: #ffca28;
+  font-weight: bold;
+}
+
+.button-prelist p {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.button-prelist div {
+  border-radius: 5px;
+  height: 500px;
+}
