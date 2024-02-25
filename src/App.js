@@ -123,14 +123,6 @@ function App() {
       "schlagFactor": "195.27"
     },
     {
-      "imageUrl": "https://t1.blockdit.com/photos/2023/05/645b50656c797715e6548765_800x0xcover_BJICo_gI.jpg",
-      "nom": "captain morgan",
-      "cl": 100,
-      "tauxAlcool": 35,
-      "prix": 20,
-      "schlagFactor": "175.00"
-    },
-    {
       "imageUrl": "https://media.carrefour.fr/medias/d8abe0099ba73e478721f56c052d4d1d/p_1500x1500/08714800025898-c1n1-s08.jpg",
       "nom": "8.6 black",
       "cl": 50,
