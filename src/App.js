@@ -407,7 +407,7 @@ function App() {
           {dataBeerShlag.map((data, index) => (
             <div key={index} >
 
-              <div className='stateConteneur' key={index} style={{}}>
+              <div className='stateConteneur' key={index}>
                 <div className='img-and-top'>
                   {data.imageUrl === '' ?
                     <div style={{ height: '64px', width: '64px', backgroundColor: 'rgba(134, 134, 134, 0.28)', borderRadius: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -416,11 +416,12 @@ function App() {
                     :
                     <img alt='beerProfil' src={data.imageUrl} style={{ height: '64px', width: '64px' }}></img>
                   }
-                  <h1><strong>{index + 1}</strong></h1>
+                  <h1 className='beer-top'><strong>{index + 1}</strong></h1>
                 </div>
                 <div className='nom-and-score'>
-                  <h1><strong>{data.nom}</strong></h1>
-                  <p>{data.cl}CL - {data.tauxAlcool}% - {data.prix}€ = <strong>SCORE: {data.schlagFactor}</strong></p>
+                  <h1 className='beer-name'><strong>{data.nom}</strong></h1>
+                  <p className='beer-info'>{data.cl}CL | {data.tauxAlcool}% | {data.prix}€ {'->'} <strong>SF {data.schlagFactor}</strong></p>
+                  <p className='phone-sf'>SF {data.schlagFactor}</p>
                 </div>
                 {editIndex === index ? (
                   <div style={{ position: 'fixed', backgroundColor: 'rgba(40, 167, 69, 0.28)', width: '100%', height: '100vh', top: 0, left: 0, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
@@ -480,7 +481,7 @@ function App() {
                     </div>
                   </div>
                 ) : (
-                  <button style={{ width: '70px' }} onClick={() => handleEditClick(index)}>Edit</button>
+                  <button className='button-edit' onClick={() => handleEditClick(index)}>Edit</button>
                 )}
               </div>
               <div style={{ borderBottom: '1px solid black' }} />

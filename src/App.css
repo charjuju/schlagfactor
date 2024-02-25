@@ -212,6 +212,7 @@ ul li:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: none;
 }
 
 .ma-stateConteneur>div:nth-child(2) {
@@ -222,7 +223,7 @@ ul li:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 128px;
+  max-width: 128px;
 }
 
 .nom-and-score {
@@ -289,4 +290,63 @@ ul li:hover {
 .button-prelist div {
   border-radius: 5px;
   height: 500px;
+}
+
+.beer-top {
+  font-size: 35px;
+}
+
+.beer-name {
+  font-size: 35px;
+}
+
+.beer-info {
+  font-size: 15px;
+}
+
+.beer-info strong{
+  font-size: 20px;
+}
+
+.button-edit {
+  width: 70px;
+}
+
+.phone-sf {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .beer-top {
+    font-size: 25px;
+  }
+
+  .beer-name {
+    font-size: 15px;
+  }
+
+  .beer-info {
+    display: none;
+  }
+
+  .beer-info strong {
+    display: block;
+    font-size: 16px;
+  }
+
+  .button-edit {
+    border-radius: 100px;
+  }
+
+  .phone-sf {
+    display: block;
+  }
+
+  .nom-and-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-inline: 10px;
+  }
 }
