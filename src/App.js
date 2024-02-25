@@ -408,7 +408,7 @@ function App() {
             </div>
             :
             <div>
-              <button onClick={() => setDataBeerShlag(defaudListe)} className='button-prelist'><p>Information Bierre Carfour</p> <div style={{backgroundSize: 'cover', backgroundPosition: 'center',backgroundImage: 'url(https://images7.alphacoders.com/359/359942.jpg)'}}/></button>
+              <button onClick={() => setDataBeerShlag(defaudListe)} className='button-prelist'><p>Informations Bières Carrefour</p> <div style={{backgroundSize: 'cover', backgroundPosition: 'center',backgroundImage: 'url(https://images7.alphacoders.com/359/359942.jpg)'}}/></button>
             </div>
 
           }
