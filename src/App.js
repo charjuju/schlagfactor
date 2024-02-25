@@ -424,8 +424,8 @@ function App() {
                   <p className='phone-sf'>SF {data.schlagFactor}</p>
                 </div>
                 {editIndex === index ? (
-                  <div style={{ position: 'fixed', backgroundColor: 'rgba(40, 167, 69, 0.28)', width: '100%', height: '100vh', top: 0, left: 0, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                    <div style={{ width: '50vw', backgroundColor: 'white', borderRadius: '24px', display: 'flex', flexWrap: 'wrap', padding: '50px', justifyContent: 'space-between' }}>
+                  <div style={{ position: 'fixed', backgroundColor: 'rgba(40, 167, 69, 0.28)', width: '100%', height: '100vh', top: 0, left: 0, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
+                    <div style={{maxHeight: '100vh', overflow: 'scroll', overflowX: 'hidden', width: '50vw', backgroundColor: 'white', borderRadius: '24px', display: 'flex', flexWrap: 'wrap', padding: '50px', justifyContent: 'space-between' }}>
                       <div className='edit-inpit-div'>
                         <p>Url</p>
                         <input style={{ margin: '10px' }}
