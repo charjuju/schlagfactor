@@ -256,6 +256,7 @@ ul li:hover {
 .edit-inpit-div {
   display: flex;
   flex-direction: column;
+  width: 200px;
 }
 
 .edit-inpit-div input {

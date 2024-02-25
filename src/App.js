@@ -473,7 +473,7 @@ function App() {
                           placeholder="Prix"
                         />
                       </div>
-                      <div style={{ display: 'flex' }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap'}}>
                         <button className='button-vert' style={{ margin: '10px' }} onClick={() => handleEdit(index)}>Save</button>
                         <button style={{ margin: '10px' }} onClick={() => setEditIndex(null)}>Annuler</button>
                         <button style={{ margin: '10px' }} onClick={() => { setDataBeerShlag(dataBeerShlag.filter((_, i) => index !== i)); setEditIndex(null) }}>Supprimer</button>
