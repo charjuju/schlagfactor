@@ -186,8 +186,8 @@ function App() {
             />
           </label>
         </div>
-        <div style={{margin: '0px', width: '200px', padding: '10px'}}>
-          <button style={{margin: '0px', width: '100%', height: '100%'}} type="submit">Appliquer</button>
+        <div style={{ margin: '0px', width: '200px', padding: '10px' }}>
+          <button className='button-vert' style={{ margin: '0px', width: '100%', height: '100%' }} type="submit">Appliquer</button>
         </div>
       </form>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -203,6 +203,11 @@ function App() {
           onChange={handleFileUpload}
         />
         <ul>
+          {dataBeerShlag.length > 0 &&
+            <div style={{ display: 'flex', flexDirection: "row-reverse", marginBottom: '10px' }}>
+              <button onClick={() => setDataBeerShlag([])} className='button-vert'>supprimer les information</button>
+            </div>
+          }
           {dataBeerShlag.map((data, index) => (
             <div key={index} >
 
@@ -223,8 +228,8 @@ function App() {
                 </div>
                 {editIndex === index ? (
                   <div style={{ position: 'fixed', backgroundColor: 'rgba(40, 167, 69, 0.28)', width: '100%', height: '100vh', top: 0, left: 0, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                    <div style={{ width: '50vw', backgroundColor: 'white', borderRadius: '24px', display: 'flex', flexWrap: 'wrap', padding: '50px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ width: '50vw', backgroundColor: 'white', borderRadius: '24px', display: 'flex', flexWrap: 'wrap', padding: '50px', justifyContent: 'space-between' }}>
+                      <div className='edit-inpit-div'>
                         <p>Url</p>
                         <input style={{ margin: '10px' }}
                           type="text"
@@ -233,7 +238,7 @@ function App() {
                           defaultValue="yes"
                         />
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <div className='edit-inpit-div'>
                         <p>Nom</p>
                         <input style={{ margin: '10px' }}
                           type="text"
@@ -242,7 +247,7 @@ function App() {
                           placeholder="Nom"
                         />
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <div className='edit-inpit-div'>
 
                         <p>Cl</p>
                         <input style={{ margin: '10px' }}
@@ -252,7 +257,7 @@ function App() {
                           placeholder="Cl"
                         />
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <div className='edit-inpit-div'>
 
                         <p>Alcool</p>
                         <input style={{ margin: '10px' }}
@@ -262,7 +267,7 @@ function App() {
                           placeholder="Taux Alcool"
                         />
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                      <div className='edit-inpit-div'>
                         <p>Prix</p>
                         <input style={{ margin: '10px' }}
                           type="text"
@@ -271,8 +276,11 @@ function App() {
                           placeholder="Prix"
                         />
                       </div>
-                      <button style={{ margin: '10px' }} onClick={() => handleEdit(index)}>Save</button>
-                      <button style={{ margin: '10px' }} onClick={() => setEditIndex(null)}>Annuler</button>
+                        <div style={{ display: 'flex' }}>
+                        <button className='button-vert' style={{ margin: '10px' }} onClick={() => handleEdit(index)}>Save</button>
+                        <button style={{ margin: '10px' }} onClick={() => setEditIndex(null)}>Annuler</button>
+                        <button style={{ margin: '10px' }} onClick={() => {setDataBeerShlag(dataBeerShlag.filter((_, i) => index !== i)); setEditIndex(null)}}>Supprimer</button>
+                      </div>
                     </div>
                   </div>
                 ) : (

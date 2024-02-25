@@ -59,14 +59,15 @@ form button[type="reset"]:hover {
   background-color: #e4606d;
 }
 
-form button[type="submit"] {
+.button-vert {
   background-color: #28a745;
+  color: white;
+  font-weight: bold;
 }
 
-form button[type="submit"]:hover {
+.button-vert:hover {
   background-color: #34b058;
 }
-
 
 input {
   padding: 10px;
@@ -249,4 +250,18 @@ ul li:hover {
 
 .input-text-form input {
   width: 200px;
+}
+
+.edit-inpit-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-inpit-div input {
+  margin-left: 10px;
+}
+
+.edit-inpit-div p {
+  margin: 0px;
+  margin-left: 10px;
 }
