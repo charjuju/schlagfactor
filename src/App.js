@@ -15,6 +15,7 @@ function App() {
   const [clEdit, setEditCl] = useState('');
   const [tauxAlcoolEdit, setEditTauxAlcool] = useState('');
   const [prixEdit, setEditPrix] = useState('');
+  const [tSurPoto, settSurPoto] = useState(false);
 
   const handleEdit = (indexToRemove) => {
     // Vérifier si tous les champs sont remplis
@@ -131,6 +132,17 @@ function App() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+      {tSurPoto &&
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'fixed', top: '0px', left: '0px', width: '100%', height: '100vh', backgroundColor: 'rgba(134, 134, 134, 0.28)' }}>
+          <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '24px' }}>
+            <h1>T'ai sur poto?</h1>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <button onClick={() => {setDataBeerShlag([]); settSurPoto(false)}}>oui</button>
+              <button onClick={() => settSurPoto(false)}>Non</button>
+            </div>
+          </div>
+        </div>
+      }
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#28a745' }}>
         <h2>Le Schlag Factor est le meilleur moyen de calculer la qualité cuite/prix.</h2>
         <h2> Plus il est élevé, meilleure sera ta cuite pour ton portefeuille.</h2>
@@ -205,7 +217,7 @@ function App() {
         <ul>
           {dataBeerShlag.length > 0 &&
             <div style={{ display: 'flex', flexDirection: "row-reverse", marginBottom: '10px' }}>
-              <button onClick={() => setDataBeerShlag([])} className='button-vert'>supprimer les information</button>
+              <button onClick={() => settSurPoto(true)} className='button-vert'>supprimer les information</button>
             </div>
           }
           {dataBeerShlag.map((data, index) => (
@@ -276,10 +288,10 @@ function App() {
                           placeholder="Prix"
                         />
                       </div>
-                        <div style={{ display: 'flex' }}>
+                      <div style={{ display: 'flex' }}>
                         <button className='button-vert' style={{ margin: '10px' }} onClick={() => handleEdit(index)}>Save</button>
                         <button style={{ margin: '10px' }} onClick={() => setEditIndex(null)}>Annuler</button>
-                        <button style={{ margin: '10px' }} onClick={() => {setDataBeerShlag(dataBeerShlag.filter((_, i) => index !== i)); setEditIndex(null)}}>Supprimer</button>
+                        <button style={{ margin: '10px' }} onClick={() => { setDataBeerShlag(dataBeerShlag.filter((_, i) => index !== i)); setEditIndex(null) }}>Supprimer</button>
                       </div>
                     </div>
                   </div>
